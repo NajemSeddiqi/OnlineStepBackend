@@ -1,0 +1,72 @@
+//// Exemple: mcq 
+// POST /pages/
+
+{
+	"type":"mcq",
+	"title":"Vart bor jag",
+	"author":"Team Xamarin",
+	"content": {
+		"question":"Erik bor i Borlänge",
+		"answers": ["Falun", "Borlänge"],
+		"correctAnswer": "Falun"
+	}
+}
+
+//// Exemple: mcq 
+// GET /pages/5e3946804734e24f74e8aca5
+
+{
+  "status": 1,
+  "message": "Operation success.",
+  "data": {
+    "_id": "5e3946804734e24f74e8aca5",
+    "type": "mcq",
+    "title": "Vart bor jag",
+    "author": "Team Erik",
+    "content": {
+      "answers": [
+        "Falun",
+        "Borlänge"
+      ],
+      "question": "Erik bor i Borlänge",
+      "correctAnswer": "Falun"
+    },
+    "__v": 0
+  }
+}
+
+
+//// Exemple: Cloze 
+// POST /pages/
+
+{
+	"type":"cloze",
+	"title":"Vart bor jag",
+	"author":"Team Xamarin",
+	"content": {
+		"sentence":"Erik bor i Borlänge",
+		"missingWords": ["Falun", "Borlänge"]
+	}
+}
+
+//// Exemple: Cloze 
+// GET /pages/5e3944ff01a9c252e8606339
+
+{
+  "status": 1,
+  "message": "Operation success.",
+  "data": {
+    "_id": "5e3944ff01a9c252e8606339",
+    "type": "cloze",
+    "title": "Vart bor jag",
+    "author": "Team Xamarin",
+    "content": {
+      "missingWords": [
+        "Falun",
+        "Borlänge"
+      ],
+      "sentence": "Erik bor i Falun"
+    },
+    "__v": 0
+  }
+}
